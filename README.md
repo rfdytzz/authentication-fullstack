@@ -1,10 +1,10 @@
-# 🔐 Laravel API Authentication with Sanctum & Vue.js
+# Laravel API Authentication with Sanctum & Vue.js
 
 Simple authentication system using **Laravel API** and **Vue.js** with **Sanctum** for secure token-based authentication. Axios is used to handle HTTP requests between frontend and backend.
 
 ---
 
-## 🚀 Features
+## Features
 
 - Protected Routes
 - Token-based Authentication (Sanctum)
@@ -12,7 +12,7 @@ Simple authentication system using **Laravel API** and **Vue.js** with **Sanctum
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Laravel (Backend API)
 - Vue.js (Frontend)
