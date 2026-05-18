@@ -27,5 +27,4 @@ onMounted( async () => {
 
 <template>
     <Navbar />
-    <h1 class="mt-10 text-black"></h1>
 </template>

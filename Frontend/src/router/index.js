@@ -17,9 +17,8 @@ router.beforeEach((to, from, next) => {
 
   if (to.meta.auth && !token) {
     next('/login')
-  } else {
-    next()
   }
+  next()
 })
 
 export default router

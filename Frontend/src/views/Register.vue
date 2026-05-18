@@ -32,7 +32,7 @@ const getRegister = async () => {
         )
         router.push('/login')
     } catch (error) {
-        message.value = 'Email has been taken'
+        message.value = 'Failed Registration or Email has been taken'
         console.log(error)
     }
 }
@@ -46,22 +46,22 @@ const getRegister = async () => {
             <div :class="isHide ? 'hidden' : 'block'" v-if="message" class="bg-red-500/20 flex text-red-300 justify-between items-center border-2 border-red-500 flex-1 p-3 rounded">{{ message }}<i @click="hideSession" class='bx bx-x cursor-pointer'></i></div>
             <form @submit.prevent="getRegister" action="" class="flex flex-col gap-5">
                 <div class="flex flex-col gap-2">
-                    <label for="">Name</label>
-                    <input required v-model="name" type="text" placeholder="Your Name" class="flex-1 outline-2 p-3 focus:outline-2 focus:outline-lime-500 rounded  outline-lime-600 transition duration-100">
+                    <label for="">Name <span class="text-orange-500">*</span></label>
+                    <input required v-model="name" type="text" placeholder="Your Name" class="flex-1 outline-2 p-3 focus:outline-2 focus:outline-lime-500 rounded  outline-gray-600 transition duration-100">
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label for="">Email</label>
-                    <input required v-model="email" placeholder="email@example.com" type="text" class="flex-1 outline-2 p-3 focus:outline-2 focus:outline-lime-500 rounded  outline-lime-600 transition duration-100">
+                    <label for="">Email <span class="text-orange-500">*</span></label>
+                    <input required v-model="email" placeholder="email@example.com" type="text" class="flex-1 outline-2 p-3 focus:outline-2 focus:outline-lime-500 rounded  outline-gray-600 transition duration-100">
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label for="">Password</label>
-                    <input minlength="8" required v-model="password" placeholder="Password" :type="isOpen ? 'text' : 'password'" class="flex-1 outline-2 p-3 focus:outline-2 focus:outline-lime-500 rounded  outline-lime-600 transition duration-100">
+                    <label for="">Password <span class="text-orange-500">*</span></label>
+                    <input minlength="8" required v-model="password" placeholder="Password" :type="isOpen ? 'text' : 'password'" class="flex-1 outline-2 p-3 focus:outline-2 focus:outline-lime-500 rounded  outline-gray-600 transition duration-100">
                     <div class="flex gap-2 items-center">
                         <input @click="toggle" type="checkbox" name="" id=""> Show Password
                     </div>
                 </div>
-                <button type="submit" class="bg-lime-500 rounded p-3 mt-5 text-[16px] cursor-pointer">Register</button>
-                <p class="text-center">Have an account? <router-link to="/login" class="text-lime-500">Login</router-link></p>
+                <button type="submit" class="bg-lime-500 hover:bg-lime-400 rounded p-3 mt-5 text-[16px] cursor-pointer">Register</button>
+                <p class="text-center">Have an account? <router-link to="/login" class="text-lime-500 hover:underline">Login</router-link></p>
             </form>
         </div>
     </div>

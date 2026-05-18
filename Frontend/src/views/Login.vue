@@ -46,18 +46,18 @@ const getLogin = async () => {
             <div :class="isHide ? 'hidden' : 'block'" v-if="errorMessage" class="bg-red-500/20 text-red-300 flex justify-between items-center border-2 border-red-500 flex-1 p-3 rounded">{{ errorMessage }}<i @click="hideSession" class='bx bx-x cursor-pointer'></i></div>
             <form @submit.prevent="getLogin" action="" class="flex flex-col gap-5">
                 <div class="flex flex-col gap-2">
-                    <label for="">Email</label>
-                    <input placeholder="Email" required v-model="email" type="text" class="flex-1 outline-2 p-3 focus:outline-2 focus:outline-lime-500 rounded  outline-lime-600 transition duration-100">
+                    <label for="">Email <span class="text-orange-500">*</span></label>
+                    <input placeholder="Email" required v-model="email" type="text" class="flex-1 outline-2 p-3 focus:outline-2 focus:outline-lime-500 rounded  outline-gray-600 transition duration-100">
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label for="">Password</label>
-                    <input placeholder="Password" required minlength="8" v-model="password" :type="isOpen ? 'text' : 'password'" class="flex-1 outline-2 p-3 focus:outline-2 focus:outline-lime-500 rounded  outline-lime-600 transition duration-100">
+                    <label for="">Password <span class="text-orange-500">*</span></label>
+                    <input placeholder="Password" required minlength="8" v-model="password" :type="isOpen ? 'text' : 'password'" class="flex-1 outline-2 p-3 focus:outline-2 focus:outline-lime-500 rounded  outline-gray-600 transition duration-100">
                     <div class="flex gap-2 items-center">
                         <input @click="toggle" type="checkbox" name="" id=""> Show Password
                     </div>
                 </div>
-                <button type="submit" class="bg-lime-500 rounded p-3 mt-5 text-[16px] cursor-pointer">Login</button>
-                <p class="text-center">Dont have an account? <router-link to="/register" class="text-lime-500">Register</router-link></p>
+                <button type="submit" class="bg-lime-500 rounded p-3 mt-5 text-[16px] hover:bg-lime-400 cursor-pointer">Login</button>
+                <p class="text-center">Dont have an account? <router-link to="/register" class="text-lime-500 hover:underline">Register</router-link></p>
             </form>
         </div>
     </div>
